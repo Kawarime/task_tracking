@@ -8,7 +8,7 @@
     {% block content %}
     <div class="main-content">
         <h1>Завдання</h1>
-        {% for task in tasks %}
+        {% for task in task %}
             <!-- <p><a href="{% url 'task_detail' task_id=task.id %}">{{ task.name }}</a></p> -->
             <p><h1>{{ task.name }}</h1></p>
         {% endfor %}
