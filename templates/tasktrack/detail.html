@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+
+<body>
+    {% block content %}
+        <h1>Завдання:{{task.name}}</h1>
+        <br>
+        <h2>{{task.description}}</h2>
+    {% endblock %}
+</body>

@@ -1,18 +1,24 @@
 header {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    padding: 20px;
 }
 
 nav ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 nav ul li {
-    display: inline;
     margin-right: 10px;
+}
+
+nav ul li.add-task {
+    margin-left: auto; 
 }
 
 nav ul li a {
