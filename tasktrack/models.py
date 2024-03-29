@@ -4,7 +4,9 @@ from django.contrib.auth.models import User
 class Status(models.Model):
     status = models.CharField(max_length = 50)
 
-
+    
+    def __str__(self):
+        return f"{self.status}"
 
 class Task(models.Model):
     name = models.CharField(max_length = 50)
@@ -14,3 +16,6 @@ class Task(models.Model):
     priority = models.IntegerField()
     start_date = models.DateField()
     dead_line = models.DateField()
+
+    def __str__(self):
+        return f"{self.name}"
