@@ -31,3 +31,16 @@ def task_add(request):
         return redirect("task_detail", id=task.id)
     else:
         return render(request, template_name="tasktrack/task_add.html")
+    
+def task_edit(request, task_id, task_name, task_descriprion, task_staus, task_owner, task_priority, task_start_date, task_dead_line):
+    task = Task.objects.get(id=task_id)
+    name = Task.objects.get(name = task_name)
+    descriprion = Task.objects.get(description = task_descriprion)
+    staus = Task.objects.get(staus = task_staus)
+    owner = Task.objects.get(owner = task_owner)
+    priority = Task.objects.get(priority = task_priority)
+    start_date = Task.objects.get(start_date = task_start_date)
+    dead_line = Task.objects.get(dead_line = task_dead_line)
+    return render(request, "tasktrack/task_edit.html")
+
+

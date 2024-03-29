@@ -7,24 +7,29 @@
 {% block content %}
     <form method="POST" action="{% url 'task_add' %}">
         {% csrf_token %}
-        <label for="task_name">Мета завдання</label>
-        <input type="text" id="task_name" name="task_name">
-        <br>
-        <label for="task_description">Опис завдання</label>
-        <input type="text" id="task_description" name="task_description">
-        <br>
-        <label for="task_status">Статус виконання</label>
-        <input type="text" id="task_status" name="task_status">
-        <br>
-        <label for="task_owner">Tasks owner</label>
-        <input type="text" id="task_owner" name="task_owner">
-        <br>
-        <label for="task_priority">Пріорітет завдання</label>
-        <input type="number" id="task_priority" name="task_priority">
-        <br>
-        <label for="task_deadline">Дедлайн</label>
-        <input type="date" id="task_deadline" name="task_deadline">
-        <br>
-        <button type="submit">Створити завдання</button>
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Мета завдання</label>
+              <input type="text" class="form-control" id="task_name" name="task_name">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Опис завдання</label>
+              <input type="text" class="form-control" id="task_description" name="task_description">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Статус виконання</label>
+                <input type="text" class="form-control" id="task_status" name="task_status">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Пріорітет завдання</label>
+              <input type="number" class="form-control" id="task_priority" name="task_priority">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Дедлайн</label>
+                <input type="date" class="form-control" id="task_deadline" name="task_deadline">
+            </div>
+      
+            <button type="submit" class="btn btn-primary">Створити</button>
+          </form>
     </form>
 {% endblock %}
