@@ -7,7 +7,7 @@
         <br>
         <h2>{{task.description}}</h2>
         <br>
-        <a href="{% url 'task_edit', task.id, task.name, task.descriprion, task.status, task.owner, task.priority, task.start_date, task.dead_line %}">
+        <a href="{% url 'task_edit' task_id=task.id %}">
             <button type="submit" class="btn btn-primary">Змінити</button></a>
     {% endblock %}
 </body>
