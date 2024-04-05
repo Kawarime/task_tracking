@@ -5,29 +5,11 @@
     <link rel="stylesheet" href="{% static 'main.css' %}">
 </head>
 {% block content %}
-    <form method="POST" action="{% url 'task_add' %}">
+    <form method="post">
         {% csrf_token %}
+        {{ form.as_p }}
         <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Мета завдання</label>
-              <input type="text" class="form-control" id="task_name" name="task_name">
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Опис завдання</label>
-              <input type="text" class="form-control" id="task_description" name="task_description">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Статус виконання</label>
-                <input type="text" class="form-control" id="task_status" name="task_status">
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Пріорітет завдання</label>
-              <input type="number" class="form-control" id="task_priority" name="task_priority">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Дедлайн</label>
-                <input type="date" class="form-control" id="task_deadline" name="task_deadline">
-            </div>
+            
       
             <button type="submit" class="btn btn-primary">Створити</button>
           </form>

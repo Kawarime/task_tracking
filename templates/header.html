@@ -13,8 +13,9 @@
         <nav>
             <ul>
                 <li><img src="static/img/logo.jpg" width="35" height="30"></li>
-                <li><a href="{% url 'index' %}">Головна</a></li>
-                <li class="add-task"><a href="{% url 'task_add' %}">Створити нове завдання</a></li>
+                <li><a href="{% url 'tasktrack:task_list' %}">Головна</a></li>
+                <li>{{ user.is_authenticated }}</li>
+                <li class="add-task"><a href="{% url 'tasktrack:task_add' %}">Створити нове завдання</a></li>
             </ul>
         </nav>
     </header>

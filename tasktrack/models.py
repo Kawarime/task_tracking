@@ -10,9 +10,9 @@ class Task(models.Model):
     ]
     name = models.CharField(max_length = 50)
     description = models.TextField()
-    staus = models.CharField(max_length = 50, choices = STATUSES, default = "notdone")
-    owner = models.ManyToManyField(User)
+    status = models.CharField(max_length = 50, choices = STATUSES, default = "notdone")
     priority = models.IntegerField()
+    creator = models.ForeignKey(User, on_delete=models.DO_NOTHING, null=True, blank=True)
     start_date = models.DateField()
     dead_line = models.DateField()
 
