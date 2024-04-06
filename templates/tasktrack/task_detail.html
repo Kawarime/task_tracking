@@ -1,12 +1,13 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends 'base.html' %}
 
-<body>
-    {% block content %}
-        <h1>Завдання:{{task.name}}</h1>
-        <br>
-        <h2>{{task.description}}</h2>
-        <br>
-            <button type="submit" class="btn btn-primary">Змінити</button></a>
-    {% endblock %}
-</body>
+{% block content %}
+<div class="container mt-3">
+    <h2>{{ task.title }}</h2>
+    <p>{{ task.description }}</p>
+    <p>Статус: <span class="badge badge-primary">{{ task.status }}</span></p>
+    <p>Пріоритет: <span class="badge badge-secondary">{{ task.priority }}</span></p>
+    <a href="{% url 'tasktrack:task_update' task.id %}" class="btn btn-warning">Редагувати</a>
+    <a href="{% url 'tasktrack:task_delete' task.id %}" class="btn btn-danger">Видалити</a>
+</div>
+
+{% endblock %}

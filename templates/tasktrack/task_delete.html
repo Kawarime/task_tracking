@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Оновлення завдання</h2>
+    <p>Ви впевнені, що хочете видалити завдання"{{ object.title }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Оновити завдання</button>
+        <a href="{% url 'tasktrack:task_list' %}" class="btn btn-secondary">Назад до списку завдань</a>
+    </form>
+</div>
+{% endblock %}
