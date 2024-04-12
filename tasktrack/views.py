@@ -14,7 +14,7 @@ class TaskListView(ListView):
 class TaskDetailView(DetailView):
     model = Task
     template_name = "tasktrack/task_detail.html"
-    context_object_name = "tasks"
+    context_object_name = "task"
 
 class TaskAddView(LoginRequiredMixin, CreateView):
     model = Task
