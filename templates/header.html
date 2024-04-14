@@ -16,6 +16,7 @@
                 <li><a href="{% url 'tasktrack:task_list' %}">Головна</a></li>
                 <li>{{ user.is_authenticated }}</li>
                 <li class="add-task"><a href="{% url 'tasktrack:task_add' %}">Створити нове завдання</a></li>
+                <li class="add-comment"><a href="{% url 'tasktrack:comment_add' %}">Створити новий коментар</a></li>
             </ul>
         </nav>
     </header>
